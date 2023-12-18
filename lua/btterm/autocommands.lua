@@ -8,19 +8,19 @@ local events = { "User" }
 
 vim.api.nvim_create_autocmd(events, {
 	group = btterm_augroup,
-	pattern = "M.BTTERM_OPEN_EVENT",
+	pattern = M.BTTERM_OPEN_EVENT,
 	command = "startinsert",
 })
 
 vim.api.nvim_create_autocmd(events, {
 	group = btterm_augroup,
-	pattern = "M.BTTERM_OPEN_EVENT",
+	pattern = M.BTTERM_OPEN_EVENT,
 	command = "set nonumber",
 })
 
 vim.api.nvim_create_autocmd(events, {
 	group = btterm_augroup,
-	pattern = "M.BTTERM_OPEN_EVENT",
+	pattern = M.BTTERM_OPEN_EVENT,
 	command = "set norelativenumber",
 })
 
