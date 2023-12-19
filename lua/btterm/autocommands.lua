@@ -24,4 +24,11 @@ vim.api.nvim_create_autocmd(events, {
 	command = "set norelativenumber",
 })
 
+-- Closes buff on term close
+vim.api.nvim_create_autocmd("TermClose", {
+	callback = function()
+		vim.cmd("close")
+	end,
+})
+
 return M
