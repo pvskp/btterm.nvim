@@ -13,7 +13,8 @@ return {
 	lazy = false,
 	config = function()
 		require("btterm").setup({})
-    end,
+    	end,
+}
 ```
 
 # 🚀 Usage
