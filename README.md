@@ -22,6 +22,22 @@ By default, `btterm` will create the following mappings:
 - `<M-s>`: Open a bottom terminal
 - `<M-d>`: Open a side terminal
 
+For better movement between windows, it's recommended to use a remap to deal with the terminal mode escape sequence (<C-\><C-N>, see `:h terminal-input`). For example: 
+
+```lua
+--- Normal mode
+keymap("n", "<M-j>", "<C-w>j")
+keymap("n", "<M-k>", "<C-w>k")
+keymap("n", "<M-l>", "<C-w>l")
+keymap("n", "<M-h>", "<C-w>h")
+
+--- Terminal mode
+keymap("t", "<M-k>", "<C-\\><C-n><C-w>k", { silent = true })
+keymap("t", "<M-j>", "<C-\\><C-n><C-w>j", { silent = true })
+keymap("t", "<M-l>", "<C-\\><C-n><C-w>l", { silent = true })
+keymap("t", "<M-h>", "<C-\\><C-n><C-w>h", { silent = true })
+```
+
 # ⚙️  Configuration
 You can override the default mappings by passing a the following options to the `setup` function:
 ```lua
