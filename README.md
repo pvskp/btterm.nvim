@@ -22,7 +22,7 @@ By default, `btterm` will create the following mappings:
 - `<M-s>`: Open a bottom terminal
 - `<M-d>`: Open a side terminal
 
-For better movement between windows, it's recommended to use a remap to deal with the terminal mode escape sequence (<C-\><C-N>, see `:h terminal-input`). For example: 
+For better movement between windows, it's recommended to use a remap to deal with the terminal mode escape sequence (`<C-\><C-N>`, see `:h terminal-input`). For example: 
 
 ```lua
 --- Normal mode
